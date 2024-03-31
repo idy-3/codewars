@@ -19,11 +19,10 @@ public class HighAndLow {
             }
         }
 
-
         return maxNum + " " + minNum;
     }
 
-    public static String solution2(String numbers){
+    public static String solution1(String numbers){
 
         // --> solution 2
         var maxNum = Integer.MIN_VALUE;
@@ -31,12 +30,11 @@ public class HighAndLow {
         for(var c : numbers.split(" ")){
             maxNum = Integer.max(maxNum, Integer.parseInt(c));
             minNum = Integer.min(minNum, Integer.parseInt(c));
-
         }
         return maxNum + " " + minNum;
     }
 
-    public static String solution3(String numbers){
+    public static String solution2(String numbers){
 
         var stats = Arrays.stream(numbers.split(" ")).mapToInt(Integer::parseInt).summaryStatistics();
         return stats.getMax() + " " + stats.getMin();

@@ -1,19 +1,31 @@
 import kata.*;
 
 public class Main {
+
     public static void main(String[] args) {
 
-        tenMinutesWalk();
+        spinWordsTest();
     }
 
-    public static void tenMinutesWalk() {
+    public static void spinWordsTest(){
+        System.out.println(SpinWords.solution("Welcome"));
+        System.out.println(SpinWords.solution("Hey fellow warriors"));
+    }
+
+    public static void breakCamelCaseTest(){
+        System.out.println(BreakCamelCase.camelCase1("camelCasing"));
+        System.out.println(BreakCamelCase.camelCase1("camelCasingTest"));
+        System.out.println(BreakCamelCase.camelCase1("camelcasingtest"));
+    }
+
+    public static void tenMinutesWalkTest() {
         System.out.println(TenMinutesWalk.isValid(new char[] {'n','s','n','s','n','s','n','s','n','s'}));
         System.out.println(TenMinutesWalk.isValid(new char[] {'w','e','w','e','w','e','w','e','w','e','w','e'}));
         System.out.println(TenMinutesWalk.isValid(new char[] {'w'}));
         System.out.println(TenMinutesWalk.isValid(new char[] {'n','n','n','s','n','s','n','s','n','s'}));
     }
 
-    public static void countCharacters() {
+    public static void countCharactersTest() {
         System.out.println(CountCharacters.count(""));
         System.out.println(CountCharacters.count("a"));
         System.out.println(CountCharacters.count("aabbbac"));
@@ -52,8 +64,8 @@ public class Main {
     }
 
     public static void HighAndLowTest() {
-        System.out.println(HighAndLow.solution("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
-        System.out.println(HighAndLow.solution("1 2 3"));
+        System.out.println(HighAndLow.solution1("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+        System.out.println(HighAndLow.solution1("1 2 3"));
     }
 }
 
