@@ -4,7 +4,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        duplicateEncoderTest();
+        scrambliesTest();
+    }
+
+    public static void scrambliesTest() {
+        System.out.println(Scramblies.scramble1("rkqodlw", "world"));       // =>  True
+        System.out.println(Scramblies.scramble1("cedewaraaossoqqyt", "codewars"));    // =>  True
+        System.out.println(Scramblies.scramble1("katas", "steak"));   // =>  False
+        System.out.println(Scramblies.scramble1("scriptjavx", "javascript"));      // =>  False
+        System.out.println(Scramblies.scramble1("scriptingjava", "javascript"));      // =>  True
+        System.out.println(Scramblies.scramble1("scriptsjava", "javascripts"));      // =>  True
+        System.out.println(Scramblies.scramble1("javscripts", "javascript"));      // =>  False
+        System.out.println(Scramblies.scramble1("aabbcamaomsccdd", "commas"));      // =>  True
+        System.out.println(Scramblies.scramble1("commas", "commas"));      // =>  True
+        System.out.println(Scramblies.scramble1("sammoc", "commas"));      // =>  True
     }
 
     public static void duplicateEncoderTest() {
@@ -15,11 +28,11 @@ public class Main {
     }
 
     public static void braceCheckerTest() {
-        System.out.println(BraceChecker.isValid1("(){}[]"));
-        System.out.println(BraceChecker.isValid1("([{}])"));
-        System.out.println(BraceChecker.isValid1("()"));
-        System.out.println(BraceChecker.isValid1("[(])"));
-        System.out.println(BraceChecker.isValid1("[({})](]"));
+        System.out.println(BraceChecker.isValid("(){}[]"));
+        System.out.println(BraceChecker.isValid("([{}])"));
+        System.out.println(BraceChecker.isValid("()"));
+        System.out.println(BraceChecker.isValid("[(])"));
+        System.out.println(BraceChecker.isValid("[({})](]"));
     }
 
     public static void spinWordsTest() {

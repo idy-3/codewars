@@ -14,7 +14,7 @@ public class DuplicateEncoder {
 //      "Success"  =>  ")())())"
 //      "(( @"     =>  "))(("
 
-    public static String encode(String word){
+    public static String encode(String word) {
         var countTally = new HashMap<Character, Integer>();
         var strBuilder = new StringBuilder();
 
@@ -23,9 +23,9 @@ public class DuplicateEncoder {
         }
 
         for (Character c : word.toLowerCase().toCharArray()) {
-            if (countTally.get(c) == 1){
+            if (countTally.get(c) == 1) {
                 strBuilder.append("(");
-            }else {
+            } else {
                 strBuilder.append(")");
             }
         }

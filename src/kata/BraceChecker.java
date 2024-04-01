@@ -1,50 +1,50 @@
 package kata;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
 
 public class BraceChecker {
 
     public static boolean isValid(String braces) {
 
         if (braces == null) {
-         return false;
+            return false;
         }
 
-        Stack<Character> strStack = new Stack<>();
+        var strStack = new ArrayDeque<Character>();
 
         strStack.push(braces.charAt(0));
         braces = new StringBuilder(braces).deleteCharAt(0).toString();
 
-        for (char b : braces.toCharArray()){
+        for (char b : braces.toCharArray()) {
             if (strStack.isEmpty()) {
                 strStack.push(b);
                 continue;
             }
-             if (strStack.peek() == '(' && b == ')'){
-                 strStack.pop();
-             }else if (strStack.peek() == '[' && b == ']') {
-                 strStack.pop();
-             }else if (strStack.peek() == '{' && b == '}') {
-                 strStack.pop();
-             }else {
+            if (strStack.peek().equals('(') && b == ')') {
+                strStack.pop();
+            } else if (strStack.peek().equals('[') && b == ']') {
+                strStack.pop();
+            } else if (strStack.peek().equals('{') && b == '}') {
+                strStack.pop();
+            } else {
                 strStack.push(b);
-             }
+            }
         }
 
         return strStack.isEmpty();
     }
 
     public static boolean isValid1(String braces) {
-        Stack<Character> strStack = new Stack<>();
+        var strStack = new ArrayDeque<Character>();
 
-        for (char b : braces.toCharArray()){
-            if (!strStack.isEmpty() && strStack.peek() == '(' && b == ')'){
+        for (char b : braces.toCharArray()) {
+            if (!strStack.isEmpty() && strStack.peek() == '(' && b == ')') {
                 strStack.pop();
-            }else if (!strStack.isEmpty() && strStack.peek() == '[' && b == ']') {
+            } else if (!strStack.isEmpty() && strStack.peek() == '[' && b == ']') {
                 strStack.pop();
-            }else if (!strStack.isEmpty() && strStack.peek() == '{' && b == '}') {
+            } else if (!strStack.isEmpty() && strStack.peek() == '{' && b == '}') {
                 strStack.pop();
-            }else {
+            } else {
                 strStack.push(b);
             }
         }
@@ -52,8 +52,8 @@ public class BraceChecker {
         return strStack.isEmpty();
     }
 
-    public static boolean isValid2(String braces){
-        Stack<Character> s = new Stack<>();
+    public static boolean isValid2(String braces) {
+        var s = new ArrayDeque<Character>();
 
         for (char c : braces.toCharArray()) {
 
