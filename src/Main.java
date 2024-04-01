@@ -4,25 +4,40 @@ public class Main {
 
     public static void main(String[] args) {
 
-        spinWordsTest();
+        duplicateEncoderTest();
     }
 
-    public static void spinWordsTest(){
+    public static void duplicateEncoderTest() {
+        System.out.println(DuplicateEncoder.encode("din"));       // =>  "((("
+        System.out.println(DuplicateEncoder.encode("recede"));    // =>  "()()()"
+        System.out.println(DuplicateEncoder.encode("Success"));   // =>  ")())())"
+        System.out.println(DuplicateEncoder.encode("(( @"));      // =>  "))(("
+    }
+
+    public static void braceCheckerTest() {
+        System.out.println(BraceChecker.isValid1("(){}[]"));
+        System.out.println(BraceChecker.isValid1("([{}])"));
+        System.out.println(BraceChecker.isValid1("()"));
+        System.out.println(BraceChecker.isValid1("[(])"));
+        System.out.println(BraceChecker.isValid1("[({})](]"));
+    }
+
+    public static void spinWordsTest() {
         System.out.println(SpinWords.solution("Welcome"));
         System.out.println(SpinWords.solution("Hey fellow warriors"));
     }
 
-    public static void breakCamelCaseTest(){
+    public static void breakCamelCaseTest() {
         System.out.println(BreakCamelCase.camelCase1("camelCasing"));
         System.out.println(BreakCamelCase.camelCase1("camelCasingTest"));
         System.out.println(BreakCamelCase.camelCase1("camelcasingtest"));
     }
 
     public static void tenMinutesWalkTest() {
-        System.out.println(TenMinutesWalk.isValid(new char[] {'n','s','n','s','n','s','n','s','n','s'}));
-        System.out.println(TenMinutesWalk.isValid(new char[] {'w','e','w','e','w','e','w','e','w','e','w','e'}));
-        System.out.println(TenMinutesWalk.isValid(new char[] {'w'}));
-        System.out.println(TenMinutesWalk.isValid(new char[] {'n','n','n','s','n','s','n','s','n','s'}));
+        System.out.println(TenMinutesWalk.isValid(new char[]{'n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's'}));
+        System.out.println(TenMinutesWalk.isValid(new char[]{'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e', 'w', 'e'}));
+        System.out.println(TenMinutesWalk.isValid(new char[]{'w'}));
+        System.out.println(TenMinutesWalk.isValid(new char[]{'n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's'}));
     }
 
     public static void countCharactersTest() {
@@ -52,7 +67,6 @@ public class Main {
         System.out.println(DuplicateCount.solution("Indivisibilities"));
         System.out.println(DuplicateCount.solution("aA11"));
         System.out.println(DuplicateCount.solution("ABBA"));
-
     }
 
     public static void getCountTest() {

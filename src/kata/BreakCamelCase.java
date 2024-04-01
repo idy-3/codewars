@@ -9,11 +9,11 @@ public class BreakCamelCase {
 
         var tempIdx = -1;
         var idx = 0;
-        while (idx < input.length()){
-            if(Character.isUpperCase(input.charAt(idx))){
-                if (tempIdx < 0){
+        while (idx < input.length()) {
+            if (Character.isUpperCase(input.charAt(idx))) {
+                if (tempIdx < 0) {
                     result.add(input.substring(0, idx));
-                }else {
+                } else {
                     result.add(input.substring(tempIdx, idx));
                 }
                 tempIdx = idx;

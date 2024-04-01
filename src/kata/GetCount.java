@@ -5,6 +5,7 @@ public class GetCount {
 //          We will consider a, e, i, o, u as vowels for this kata.HighAndLow (but not y).
 
     private static final String VOWELS = "aeiou";
+
     public static int solution(String str) {
         var count = 0;
 
@@ -22,15 +23,15 @@ public class GetCount {
         return count;
     }
 
-    public static int solution2(String str){
+    public static int solution2(String str) {
         // -> solution 2
-        return  (int) str.chars().filter(c -> VOWELS.indexOf(c) >= 0).count();
+        return (int) str.chars().filter(c -> VOWELS.indexOf(c) >= 0).count();
 
     }
 
-    public static int solution3(String str){
+    public static int solution3(String str) {
         // -> solution 3
-        return (int) str.chars().mapToObj(i -> (char)i).filter(i -> VOWELS.contains(String.valueOf(i))).count();
+        return (int) str.chars().mapToObj(i -> (char) i).filter(i -> VOWELS.contains(String.valueOf(i))).count();
 
     }
 }

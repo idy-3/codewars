@@ -21,7 +21,7 @@ public class CountCharacters {
         Map<Character, Integer> countTally = new HashMap<>();
 
         for (Character c : str.toCharArray()) {
-            countTally.put(c, countTally.getOrDefault(c, 0)+1);
+            countTally.put(c, countTally.getOrDefault(c, 0) + 1);
         }
         return countTally;
     }

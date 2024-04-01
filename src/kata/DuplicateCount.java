@@ -23,13 +23,13 @@ public class DuplicateCount {
         for (int i = 0; i < text.length(); i++) {
             if (countTally.get(text.charAt(i)) == null) {
                 countTally.put(text.charAt(i), 1);
-            }else {
+            } else {
                 countTally.put(text.charAt(i), countTally.get(text.charAt(i)) + 1);
             }
         }
 
-        for (int count : countTally.values()){
-            if (count > 1){
+        for (int count : countTally.values()) {
+            if (count > 1) {
                 total++;
             }
         }
@@ -38,7 +38,7 @@ public class DuplicateCount {
 
     public static int solution2(String text) {
         // -> solution 2
-        return (int) text.toLowerCase().chars().boxed().collect(Collectors.groupingBy(k->k, Collectors.counting())).values().stream().filter(e -> e > 1).count();
+        return (int) text.toLowerCase().chars().boxed().collect(Collectors.groupingBy(k -> k, Collectors.counting())).values().stream().filter(e -> e > 1).count();
 
     }
 }

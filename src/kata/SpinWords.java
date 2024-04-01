@@ -6,14 +6,13 @@ import java.util.stream.Collectors;
 public class SpinWords {
 
 
-
     public static String solution(String sentence) {
         var result = new StringBuilder();
 
-        for (var s : sentence.split(" ")){
-            if(s.length() > 4){
+        for (var s : sentence.split(" ")) {
+            if (s.length() > 4) {
                 result.append(new StringBuilder(s).reverse());
-            }else {
+            } else {
                 result.append(s);
             }
             result.append(" ");
@@ -24,12 +23,12 @@ public class SpinWords {
 
     public static String solution1(String sentence) {
         String[] words = sentence.split(" ");
-        for (int i=0; i<words.length; i++) {
+        for (int i = 0; i < words.length; i++) {
             if (words[i].length() > 4) {
                 words[i] = new StringBuilder(words[i]).reverse().toString();
             }
         }
-        return String.join(" ",words);
+        return String.join(" ", words);
     }
 
     public static String solution2(String sentence) {

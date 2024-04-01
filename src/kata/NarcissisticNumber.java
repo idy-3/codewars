@@ -14,7 +14,7 @@ public class NarcissisticNumber {
         int testNum = number;
         int total = 0;
 
-        while(testNum > 0){
+        while (testNum > 0) {
             total += (int) Math.pow((testNum % 10), length);
             testNum /= 10;
         }
