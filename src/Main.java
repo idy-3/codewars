@@ -4,7 +4,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        scrambliesTest();
+        humanReadableTime();
+    }
+
+    public static void humanReadableTime(){
+        System.out.println(HumanReadableTime.makeReadable1(0));      // => 00:00:00
+        System.out.println(HumanReadableTime.makeReadable1(5));      // => 00:00:05
+        System.out.println(HumanReadableTime.makeReadable1(60));      // => 00:01:00
+        System.out.println(HumanReadableTime.makeReadable1(86399));      // => 23:59:59
+        System.out.println(HumanReadableTime.makeReadable1(359999));      // => 99:59:59
     }
 
     public static void scrambliesTest() {
