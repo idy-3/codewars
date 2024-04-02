@@ -7,7 +7,7 @@ public class Main {
         humanReadableTime();
     }
 
-    public static void humanReadableTime(){
+    public static void humanReadableTime() {
         System.out.println(HumanReadableTime.makeReadable1(0));      // => 00:00:00
         System.out.println(HumanReadableTime.makeReadable1(5));      // => 00:00:05
         System.out.println(HumanReadableTime.makeReadable1(60));      // => 00:01:00
