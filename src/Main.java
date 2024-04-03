@@ -4,7 +4,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        humanReadableTime();
+        trailingZerosOfFact();
+    }
+
+    public static void trailingZerosOfFact() {
+        System.out.println(TrailingZerosOfFact.zeros(0));   // => 0
+        System.out.println(TrailingZerosOfFact.zeros(6));   // => 1
+        System.out.println(TrailingZerosOfFact.zeros(12));  // => 2
+        System.out.println(TrailingZerosOfFact.zeros(14));  // => 2
+        System.out.println(TrailingZerosOfFact.zeros(23));  // => 4
+//        System.out.println(TrailingZerosOfFact.zeros(120));  // => 28
     }
 
     public static void humanReadableTime() {
