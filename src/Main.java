@@ -4,7 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        trailingZerosOfFact();
+        singlePermutations();
+    }
+
+    public static void singlePermutations(){
+        System.out.println(Permutations.singlePermutations2("a"));  // => [a ]
+        System.out.println(Permutations.singlePermutations2("ab"));  // => ["ab","ba" ]
+        System.out.println(Permutations.singlePermutations2("abc"));  // => [abc , acb , bac , bca , cab , cba ]
+        System.out.println(Permutations.singlePermutations2("aabb"));  // => ["aabb", "abab", "abba", "baab", "baba", "bbaa" ]
     }
 
     public static void trailingZerosOfFact() {
