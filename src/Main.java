@@ -4,7 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        LongestPalindrome();
+        RomanToInt();
+    }
+
+    public static void RomanToInt(){
+        System.out.println(RomanNumerals.romanToInt1("III"));  // => 3
+        System.out.println(RomanNumerals.romanToInt1("LVIII"));  // => 58
+        System.out.println(RomanNumerals.romanToInt1("MCMXCIV"));  // => 1994
+
     }
 
     public static void LongestPalindrome(){
