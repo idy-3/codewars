@@ -4,7 +4,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        singlePermutations();
+        LongestPalindrome();
+    }
+
+    public static void LongestPalindrome(){
+        System.out.println(LongestPalindrome.longestPalindrome1("babad"));  // => bab || aba
+        System.out.println(LongestPalindrome.longestPalindrome1("cbbd"));  // => bb
+
+    }
+
+    public static void longestSubstring(){
+        System.out.println(LongestSubstring.lengthOfLongestSubstring1("abcabcbb"));  // => 3
+        System.out.println(LongestSubstring.lengthOfLongestSubstring1("bbbbb"));  // => 1
+        System.out.println(LongestSubstring.lengthOfLongestSubstring1("pwwkew"));  // => 3
+        System.out.println(LongestSubstring.lengthOfLongestSubstring1(""));  // => 0
+        System.out.println(LongestSubstring.lengthOfLongestSubstring1("aab"));  // => 2
+        System.out.println(LongestSubstring.lengthOfLongestSubstring1("dvdf"));  // => 3
+        System.out.println(LongestSubstring.lengthOfLongestSubstring1("ckilbkd"));  // => 5
     }
 
     public static void singlePermutations(){
