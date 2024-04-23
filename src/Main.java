@@ -4,7 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        RomanToInt();
+        mergeTwoLinkedList();
+    }
+
+    public static void mergeTwoLinkedList(){
+        var list1 = new ListNode(1, new ListNode(2, new ListNode( 4)));
+        var list2 = new ListNode(1, new ListNode(3, new ListNode( 4)));
+
+        ListNode.printLinkedList(ListNode.mergeTwoLists(list1, list2));
     }
 
     public static void RomanToInt(){
