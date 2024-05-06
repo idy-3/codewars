@@ -4,7 +4,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-        mergeTwoLinkedList();
+        minStack();
+    }
+
+    public static void minStack(){
+        // Input
+        //      ["MinStack","push","push","push","getMin","pop","top","getMin"]
+        //      [[],[-2],[0],[-3],[],[],[],[]]
+        //
+        //  Output
+        //      [null,null,null,null,-3,null,0,-2]
+
+        MinStack2 minStack = new MinStack2();
+        minStack.push(-2);
+        minStack.push(0);
+        minStack.push(-3);
+        System.out.print(minStack.getMin() + ", "); // return -3
+        minStack.pop();
+        System.out.print(minStack.top() + ", ");    // return 0
+        System.out.print(minStack.getMin() + ", "); // return -2
     }
 
     public static void mergeTwoLinkedList(){
