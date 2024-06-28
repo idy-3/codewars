@@ -4,7 +4,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        minStack();
+        primeCheck(13);
+        primeCheck(12);
+    }
+
+    private static void primeCheck(Integer prime){
+
+        System.out.println(PrimeChecker.checker(prime));
     }
 
     public static void minStack(){
